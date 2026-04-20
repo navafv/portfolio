@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, GitBranch } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
