@@ -32,7 +32,10 @@ const projects = [
     tech: ['Python', 'Django', 'Tailwind'],
     colSpan: 'col-span-1',
     image: 'bg-gradient-to-br from-blue-900/40 to-cyan-900/40',
-    status: { label: 'In Development', color: 'bg-amber-500' }
+    status: { label: 'In Development', color: 'bg-amber-500' }, links: {
+      demo: "#",
+      github: "#"
+    }
   },
   {
     title: 'ETS2 Mods Platform',
