@@ -6,7 +6,7 @@ from api.models import ContactMessage
 admin.site.site_header = "Navaf's Command Center"
 admin.site.site_title = "Portfolio Admin"
 admin.site.index_title = "Lead Management CRM"
-admin.site.site_url = "http://localhost:5173"
+admin.site.site_url = "https://navaf.vercel.app"
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
