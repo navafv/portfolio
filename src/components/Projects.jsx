@@ -99,9 +99,11 @@ const Projects = () => {
                 </p>
 
                 <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
-                  <a target='_blank' rel='noopener noreferrer' href={project.links.demo} className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
+                  {project.links.demo && (
+                    <a target='_blank' rel='noopener noreferrer' href={project.links.demo} className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
+                      <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
                   {project.links.github && (
                     <a target='_blank' rel='noopener noreferrer' href={project.links.github} className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
                       <GitBranch size={16} /> Source Code
