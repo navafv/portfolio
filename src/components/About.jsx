@@ -3,13 +3,13 @@ import { Terminal, Database, Server } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative z-10">
+    <section id="about" className="py-24 relative z-10" aria-labelledby="about-heading">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8 relative inline-block">
+            <h2 id="about-heading" className="font-heading text-4xl md:text-5xl font-bold mb-8 relative inline-block">
               About Me
-              <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-gradient-to-r from-purple-500 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-linear-to-r from-purple-500 to-transparent"></span>
             </h2>
             <div className="glass-card p-8 rounded-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-[50px]"></div>
@@ -22,7 +22,7 @@ const About = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6" aria-label="Highlights">
             <div className="glass-card p-6 rounded-2xl glass-card-hover flex flex-col items-center text-center">
               <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
                 <Terminal size={28} />
@@ -47,8 +47,8 @@ const About = () => {
               <p className="text-sm text-gray-400">Optimized queries and solid data modeling.</p>
             </div>
             
-            <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-purple-900/30 to-transparent border-purple-500/20">
-              <h3 className="text-3xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">2+</h3>
+            <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center bg-linear-to-br from-purple-900/30 to-transparent border-purple-500/20">
+              <h3 className="text-3xl font-heading font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-400">2+</h3>
               <p className="text-sm text-gray-300 font-medium">Years Coding</p>
             </div>
           </div>

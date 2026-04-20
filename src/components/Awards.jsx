@@ -3,11 +3,15 @@ import { Trophy, Code2 } from 'lucide-react';
 
 const Awards = () => {
   return (
-    <section className="py-24 relative z-10 border-y border-white/10 bg-gradient-to-b from-black/50 to-purple-900/10">
+    <section
+      id="awards"
+      className="py-24 relative z-10 border-y border-white/10 bg-linear-to-b from-black/50 to-purple-900/10"
+      aria-labelledby="awards-heading"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Competitive <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-600">Excellence</span>
+          <h2 id="awards-heading" className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            Competitive <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-amber-600">Excellence</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Recognized for pushing the boundaries in web architecture and problem-solving at the <strong className="text-white">Inspiro 26</strong> National Level IT Fest.
@@ -17,7 +21,7 @@ const Awards = () => {
         <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
           {/* Award 1 */}
           <div className="flex-1 relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-3xl blur-xl transition-all duration-300 group-hover:blur-2xl opacity-50 group-hover:opacity-100"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-yellow-500/20 to-amber-500/20 rounded-3xl blur-xl transition-all duration-300 group-hover:blur-2xl opacity-50 group-hover:opacity-100"></div>
             <div className="relative h-full glass-card border border-yellow-500/30 p-10 rounded-3xl overflow-hidden flex flex-col items-center text-center group-hover:-translate-y-2 transition-transform duration-300">
               <div className="absolute -top-12 -right-12 text-yellow-500/10 rotate-12 group-hover:rotate-45 transition-transform duration-700">
                 <Trophy size={160} />
@@ -35,7 +39,7 @@ const Awards = () => {
 
           {/* Award 2 */}
           <div className="flex-1 relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl transition-all duration-300 group-hover:blur-2xl opacity-50 group-hover:opacity-100"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl transition-all duration-300 group-hover:blur-2xl opacity-50 group-hover:opacity-100"></div>
             <div className="relative h-full glass-card border border-cyan-500/30 p-10 rounded-3xl overflow-hidden flex flex-col items-center text-center group-hover:-translate-y-2 transition-transform duration-300">
               <div className="absolute -bottom-12 -left-12 text-cyan-500/10 -rotate-12 group-hover:-rotate-45 transition-transform duration-700">
                 <Code2 size={160} />

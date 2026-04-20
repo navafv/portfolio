@@ -68,11 +68,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10">
+    <section id="contact" className="py-24 relative z-10" aria-labelledby="contact-heading">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Connect</span>
+          <h2 id="contact-heading" className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            Let's <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-400">Connect</span>
           </h2>
           <p className="text-gray-400">
             Have a project in mind or just want to chat? Drop me a message.
@@ -99,9 +99,12 @@ const Contact = () => {
                 <input 
                   type="text" 
                   id="name"
+                  name="name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={status === 'loading'}
+                  aria-invalid={errors.name}
                   className={`bg-black/50 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 disabled:opacity-50
                     ${errors.name ? 'border-red-500/70 shadow-[0_0_15px_rgba(239,68,68,0.2)] focus:border-red-500' : 'border-white/10 focus:border-purple-500'}
                   `}
@@ -112,10 +115,13 @@ const Contact = () => {
                 <label htmlFor="email" className="text-sm font-medium text-gray-300">Email</label>
                 <input 
                   type="email" 
-                  id="email" 
+                  id="email"
+                  name="email"
+                  autoComplete="email"
                   value={formData.email}
                   onChange={handleChange}
                   disabled={status === 'loading'}
+                  aria-invalid={errors.email}
                   className={`bg-black/50 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 disabled:opacity-50
                     ${errors.email ? 'border-red-500/70 shadow-[0_0_15px_rgba(239,68,68,0.2)] focus:border-red-500' : 'border-white/10 focus:border-purple-500'}
                   `}
@@ -125,13 +131,16 @@ const Contact = () => {
             </div>
             
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-sm font-medium text-gray-300">Message</label>
+                <label htmlFor="message" className="text-sm font-medium text-gray-300">Message</label>
               <textarea 
                 id="message" 
+                name="message"
+                autoComplete="off"
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
                 disabled={status === 'loading'}
+                aria-invalid={errors.message}
                 className={`bg-black/50 border rounded-xl px-4 py-3 text-white focus:outline-none transition-all duration-300 resize-none disabled:opacity-50
                   ${errors.message ? 'border-red-500/70 shadow-[0_0_15px_rgba(239,68,68,0.2)] focus:border-red-500' : 'border-white/10 focus:border-purple-500'}
                 `}
@@ -148,7 +157,7 @@ const Contact = () => {
               <button 
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+                className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-linear-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
               >
                 {status === 'loading' ? (
                   <>

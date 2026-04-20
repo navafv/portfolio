@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const techStack = [
   { name: 'React', color: 'text-cyan-400' },
@@ -14,34 +13,38 @@ const techStack = [
 
 const TechStack = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-black/20 border-y border-white/5">
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent pointer-events-none"></div>
+    <section
+      id="tech-stack"
+      className="py-24 relative overflow-hidden bg-black/20 border-y border-white/5"
+      aria-labelledby="tech-stack-heading"
+    >
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent pointer-events-none"></div>
       
       <div className="container mx-auto px-6 mb-12 relative z-10">
-        <h2 className="font-heading text-center text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">
+        <h2 id="tech-stack-heading" className="font-heading text-center text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-gray-200 to-gray-500">
           Technologies I command
         </h2>
       </div>
 
       <div className="relative w-full overflow-hidden flex z-10">
         {/* Left Gradient Fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0f] to-transparent z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#0a0a0f] to-transparent z-10"></div>
         
-        <div className="flex animate-scrolling-text w-max">
+        <ul className="flex animate-scrolling-text w-max" aria-label="Technology list">
           {[...techStack, ...techStack, ...techStack].map((tech, index) => (
-            <div 
+            <li
               key={index}
               className="mx-4 md:mx-8 glass-card px-8 py-4 rounded-xl flex items-center justify-center whitespace-nowrap hover:border-purple-500/50 transition-colors duration-300"
             >
               <span className={`text-xl font-semibold font-heading ${tech.color}`}>
                 {tech.name}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Right Gradient Fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0f] to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#0a0a0f] to-transparent z-10"></div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GitBranch, Briefcase, MessageCircle, Clock } from 'lucide-react';
+import { GitBranch, FolderOpen, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   const [time, setTime] = useState('');
@@ -36,7 +36,7 @@ const Footer = () => {
 
   return (
     <footer className="relative border-t border-white/5 bg-black/40 pt-16 pb-8 z-10 overflow-hidden">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-purple-500/50 to-transparent"></div>
 
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex flex-col items-center md:items-start gap-2">
@@ -54,14 +54,28 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300">
+          <a
+            href="https://github.com/navafv"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300"
+          >
             <GitBranch size={18} />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300">
-            <Briefcase size={18} />
+          <a
+            href="#projects"
+            aria-label="Jump to projects"
+            className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300"
+          >
+            <FolderOpen size={18} />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-sky-500/50 hover:bg-sky-500/10 transition-all duration-300">
-            <MessageCircle size={18} />
+          <a
+            href="#contact"
+            aria-label="Jump to contact form"
+            className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-sky-500/50 hover:bg-sky-500/10 transition-all duration-300"
+          >
+            <Mail size={18} />
           </a>
         </div>
       </div>

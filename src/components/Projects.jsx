@@ -1,64 +1,15 @@
 import React from 'react';
 import { ExternalLink, GitBranch } from 'lucide-react';
-
-const projects = [
-  {
-    title: 'SMT Fruit Shop Management System',
-    description: 'Production-ready backend and mobile app with JWT authentication, offline-first data sync, and WhatsApp billing integration.',
-    tech: ['Django', 'Flutter', 'SQLite'],
-    colSpan: 'col-span-1 md:col-span-2',
-    image: 'bg-gradient-to-br from-purple-900/40 to-indigo-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' },
-    links: {
-      demo: "https://smtapp.vercel.app/",
-      github: "https://github.com/navafv/smt_project"
-    }
-  },
-  {
-    title: 'Noor Stitching Institute',
-    description: 'Full-stack institute logistics including student registrations, attendance tracking, and payment management.',
-    tech: ['React', 'Django REST', 'PostgreSQL'],
-    colSpan: 'col-span-1',
-    image: 'bg-gradient-to-br from-pink-900/40 to-rose-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' },
-    links: {
-      demo: "https://noorinstitute.vercel.app/",
-      github: "https://github.com/navafv/noor-backend"
-    }
-  },
-  {
-    title: 'ETS2 Mods Platform',
-    description: 'Gaming community hub. Custom-built platform for uploading, managing, and downloading Euro Truck Simulator 2 game modifications.',
-    tech: ['React', 'Django', 'PostgreSQL'],
-    colSpan: 'col-span-1',
-    image: 'bg-gradient-to-br from-teal-900/40 to-emerald-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' },
-    links: {
-      demo: "https://ets2mods.vercel.app/",
-      github: "https://github.com/navafv/ets2mods"
-    }
-  },
-  {
-    title: 'Family Plus (StyleStock)',
-    description: 'A comprehensive full-stack e-commerce application for a retail clothing shop. Currently architecting custom UI templates and configuring a production-ready Django backend for future deployment.',
-    tech: ['Python', 'Django', 'Tailwind'],
-    colSpan: 'col-span-1 md:col-span-2',
-    image: 'bg-gradient-to-br from-blue-900/40 to-cyan-900/40',
-    status: { label: 'In Development', color: 'bg-amber-500' }, links: {
-      demo: "#",
-      github: "#"
-    }
-  }
-];
+import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative z-10">
+    <section id="projects" className="py-24 relative z-10" aria-labelledby="projects-heading">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Projects</span>
+            <h2 id="projects-heading" className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Featured <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-400">Projects</span>
             </h2>
             <p className="text-gray-400 max-w-xl">
               A selection of my best work, focusing on robust architecture and premium user interfaces.
@@ -68,12 +19,13 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
           {projects.map((project, index) => (
-            <div
+            <article
               key={index}
               className={`group glass-card rounded-3xl overflow-hidden relative flex flex-col justify-end p-8 glass-card-hover ${project.colSpan} ${project.image}`}
+              aria-label={project.title}
             >
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-0"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent z-0"></div>
 
               {/* Status Badge */}
               <div className="absolute top-6 right-6 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
@@ -114,7 +66,7 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

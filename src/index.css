@@ -17,10 +17,15 @@
     color: var(--foreground);
   }
 
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0a0a0f 70%);
     min-height: 100vh;
     overflow-x: hidden;
+    line-height: 1.5;
   }
 }
 
