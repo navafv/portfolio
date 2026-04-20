@@ -30,7 +30,7 @@ const projects = [
     title: 'ETS2 Mods Platform',
     description: 'Gaming community hub. Custom-built platform for uploading, managing, and downloading Euro Truck Simulator 2 game modifications.',
     tech: ['React', 'Django', 'PostgreSQL'],
-    colSpan: 'col-span-1 md:col-span-2',
+    colSpan: 'col-span-1',
     image: 'bg-gradient-to-br from-teal-900/40 to-emerald-900/40',
     status: { label: 'Completed', color: 'bg-green-500' },
     links: {
@@ -42,7 +42,7 @@ const projects = [
     title: 'Family Plus (StyleStock)',
     description: 'A comprehensive full-stack e-commerce application for a retail clothing shop. Currently architecting custom UI templates and configuring a production-ready Django backend for future deployment.',
     tech: ['Python', 'Django', 'Tailwind'],
-    colSpan: 'col-span-1',
+    colSpan: 'col-span-1 md:col-span-2',
     image: 'bg-gradient-to-br from-blue-900/40 to-cyan-900/40',
     status: { label: 'In Development', color: 'bg-amber-500' }, links: {
       demo: "#",
