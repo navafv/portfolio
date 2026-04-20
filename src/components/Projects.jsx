@@ -8,7 +8,11 @@ const projects = [
     tech: ['Django', 'Flutter', 'SQLite'],
     colSpan: 'col-span-1 md:col-span-2',
     image: 'bg-gradient-to-br from-purple-900/40 to-indigo-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' }
+    status: { label: 'Completed', color: 'bg-green-500' },
+    links: {
+      demo: "https://smtapp.vercel.app/",
+      github: "https://github.com/navafv/smt_project"
+    }
   },
   {
     title: 'Noor Stitching Institute',
@@ -16,7 +20,11 @@ const projects = [
     tech: ['React', 'Django REST', 'PostgreSQL'],
     colSpan: 'col-span-1',
     image: 'bg-gradient-to-br from-pink-900/40 to-rose-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' }
+    status: { label: 'Completed', color: 'bg-green-500' },
+    links: {
+      demo: "https://noorinstitute.vercel.app/",
+      github: "https://github.com/navafv/noor-backend"
+    }
   },
   {
     title: 'Family Plus (StyleStock)',
@@ -32,7 +40,11 @@ const projects = [
     tech: ['React', 'Django', 'PostgreSQL'],
     colSpan: 'col-span-1 md:col-span-2',
     image: 'bg-gradient-to-br from-teal-900/40 to-emerald-900/40',
-    status: { label: 'Completed', color: 'bg-green-500' }
+    status: { label: 'Completed', color: 'bg-green-500' },
+    links: {
+      demo: "https://ets2mods.vercel.app/",
+      github: "https://github.com/navafv/ets2mods"
+    }
   }
 ];
 
@@ -53,8 +65,8 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`group glass-card rounded-3xl overflow-hidden relative flex flex-col justify-end p-8 glass-card-hover ${project.colSpan} ${project.image}`}
             >
               {/* Overlay gradient */}
@@ -68,7 +80,7 @@ const Projects = () => {
                 </span>
                 <span className="text-xs font-medium text-gray-300">{project.status.label}</span>
               </div>
-              
+
               <div className="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   {project.tech.map((t, i) => (
@@ -77,22 +89,24 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                   {project.description}
                 </p>
-                
+
                 <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
-                  <a href="#" className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
+                  <Link rel='noopener noreferrer' href={project.links.demo} className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
                     <ExternalLink size={16} /> Live Demo
-                  </a>
-                  <a href="#" className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
-                    <GitBranch size={16} /> Source Code
-                  </a>
+                  </Link>
+                  {project.links.github && (
+                    <Link rel='noopener noreferrer' href={project.links.github} className="flex items-center gap-2 text-sm font-medium text-white hover:text-purple-400 transition-colors">
+                      <GitBranch size={16} /> Source Code
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
