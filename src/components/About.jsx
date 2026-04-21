@@ -21,7 +21,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6" aria-label="Highlights">
             <div className="glass-card p-6 rounded-2xl glass-card-hover flex flex-col items-center text-center">
               <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
@@ -30,7 +30,7 @@ const About = () => {
               <h3 className="text-xl font-bold text-white mb-2">Production Ready</h3>
               <p className="text-sm text-gray-400">Clean architecture and scalable deployments.</p>
             </div>
-            
+
             <div className="glass-card p-6 rounded-2xl glass-card-hover flex flex-col items-center text-center sm:translate-y-8">
               <div className="w-14 h-14 rounded-full bg-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
                 <Server size={28} />
@@ -38,16 +38,16 @@ const About = () => {
               <h3 className="text-xl font-bold text-white mb-2">REST APIs</h3>
               <p className="text-sm text-gray-400">Secure and efficient backend services.</p>
             </div>
-            
-            <div className="glass-card p-6 rounded-2xl glass-card-hover flex flex-col items-center text-center sm:-translate-y-8">
+
+            <div className="glass-card p-6 rounded-2xl glass-card-hover flex flex-col items-center text-center">
               <div className="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center mb-4 text-pink-400">
                 <Database size={28} />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Complex DBs</h3>
               <p className="text-sm text-gray-400">Optimized queries and solid data modeling.</p>
             </div>
-            
-            <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center bg-linear-to-br from-purple-900/30 to-transparent border-purple-500/20">
+
+            <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center bg-linear-to-br from-purple-900/30 to-transparent border-purple-500/20 sm:translate-y-8">
               <h3 className="text-3xl font-heading font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-400">2+</h3>
               <p className="text-sm text-gray-300 font-medium">Years Coding</p>
             </div>

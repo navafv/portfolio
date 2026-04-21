@@ -21,8 +21,8 @@ const Hero = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -35,21 +35,21 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-[#0a0a0f]"
+      className="relative flex items-center justify-center pt-48 pb-24 overflow-hidden bg-[#0a0a0f]"
       aria-labelledby="hero-heading"
     >
       {/* Slow-moving Atmospheric Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <MotionDiv 
-          animate={{ 
+        <MotionDiv
+          animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
           }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           className="absolute top-1/4 left-1/4 w-160 h-160 bg-purple-900/10 rounded-full blur-[120px] origin-center"
         />
-        <MotionDiv 
-          animate={{ 
+        <MotionDiv
+          animate={{
             rotate: [360, 0],
             scale: [1, 1.3, 1],
           }}
@@ -59,13 +59,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0a0a0f_80%)]" />
       </div>
 
-      <MotionDiv 
+      <MotionDiv
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center"
       >
-        <MotionH1 
+        <MotionH1
           variants={itemVariants}
           id="hero-heading"
           className="font-heading text-6xl md:text-[8rem] leading-none font-extrabold tracking-tighter mb-4"
@@ -78,12 +78,12 @@ const Hero = () => {
         >
           Navaf V
         </MotionH1>
-        
-        <MotionH2 
+
+        <MotionH2
           variants={itemVariants}
           className="text-2xl md:text-4xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-gray-200 via-gray-400 to-gray-600 mb-6 drop-shadow-md"
         >
-          Full-Stack Developer & BCA Student
+          Full-Stack Developer & BCA&nbsp;Student
         </MotionH2>
 
         <MotionP
@@ -102,10 +102,10 @@ const Hero = () => {
           <MapPin size={16} className="text-purple-300" />
           <span className="text-sm font-medium text-gray-300 tracking-wide">Kannur, Kerala</span>
         </MotionDiv>
-        
+
         <MotionDiv variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
-          <a 
-            href="#projects" 
+          <a
+            href="#projects"
             className="group relative flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold w-full sm:w-auto overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
           >
             {/* Hover sheen effect */}
@@ -113,9 +113,9 @@ const Hero = () => {
             <span className="relative z-10">View My Arsenal</span>
             <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
-          
-          <a 
-            href="#contact" 
+
+          <a
+            href="#contact"
             className="group relative flex items-center justify-center gap-3 px-8 py-4 rounded-full font-bold text-white w-full sm:w-auto overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-white/5"
             style={{
               background: "rgba(255, 255, 255, 0.03)",
@@ -126,7 +126,7 @@ const Hero = () => {
             {/* Glowing metallic border effect on hover */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20" />
             <div className="absolute -inset-0.5 -z-10 rounded-full opacity-0 group-hover:opacity-100 blur-md bg-linear-to-r from-purple-500 via-indigo-500 to-purple-500 transition-opacity duration-500" />
-            
+
             <Mail size={20} className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-300" />
             <span className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-300">Get in Touch</span>
           </a>

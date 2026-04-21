@@ -17,7 +17,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto] md:auto-rows-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[auto] lg:auto-rows-[320px]">
           {projects.map((project, index) => {
             const demoUrl = project.links?.demo?.trim();
             const githubUrl = project.links?.github?.trim();
@@ -40,7 +40,7 @@ const Projects = () => {
                   <span className="text-xs font-medium text-gray-300">{project.status.label}</span>
                 </div>
 
-                <div className="relative z-10 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300 mt-14 md:mt-0">
+                <div className="relative z-10 transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 mt-14 lg:mt-0">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     {project.tech.map((t, i) => (
                       <span key={i} className="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-white backdrop-blur-md">
@@ -53,11 +53,11 @@ const Projects = () => {
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-300 text-sm mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <p className="text-gray-300 text-sm mb-6 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap items-center gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-150">
+                  <div className="flex flex-wrap items-center gap-3 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 delay-150">
                     {demoUrl ? (
                       <a
                         target="_blank"
