@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GitBranch, FolderOpen, Mail, Clock } from 'lucide-react';
+import brandLogo from '../assets/logo.png';
 
 const Footer = () => {
   const [time, setTime] = useState('');
@@ -40,7 +41,14 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <h3 className="text-xl font-heading font-bold text-white tracking-wide">Navaf V</h3>
+          <div className="flex items-center gap-3">
+            <img
+              src={brandLogo}
+              alt="Navaf V logo"
+              className="h-10 w-auto transition-transform duration-300 hover:scale-105"
+            />
+            <h3 className="text-xl font-heading font-bold text-white tracking-wide">Navaf V</h3>
+          </div>
           <p className="text-sm text-gray-500">Full-Stack Developer & BCA Student</p>
         </div>
 
