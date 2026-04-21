@@ -24,12 +24,13 @@ function App() {
       </a>
       <header className="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-black/30 backdrop-blur-xl">
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#home" className="flex items-center" aria-label="Navaf V home">
+          <a href="#home" className="flex items-center font-heading text-lg font-bold tracking-wide text-white" aria-label="Navaf V home">
             <img
               src={brandLogo}
               alt="Navaf V logo"
               className="h-10 w-auto transition-transform duration-300 hover:scale-105"
             />
+            Navaf V
           </a>
           <nav aria-label="Primary" className="hidden gap-6 text-sm text-gray-300 md:flex">
             <a href="#about" className="transition-colors hover:text-white">About</a>
