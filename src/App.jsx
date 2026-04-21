@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import Hero from './components/Hero';
 import About from './components/About';
 import TechStack from './components/TechStack';
@@ -9,6 +10,8 @@ import Footer from './components/Footer';
 import Seo from './components/Seo';
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-[#ededed] font-sans selection:bg-purple-500/30 selection:text-purple-200">
       <Seo />
@@ -29,7 +32,54 @@ function App() {
             <a href="#awards" className="transition-colors hover:text-white">Awards</a>
             <a href="#contact" className="transition-colors hover:text-white">Contact</a>
           </nav>
+          <button
+            type="button"
+            className="text-gray-300 transition-colors hover:text-white md:hidden"
+            onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+        {isMobileMenuOpen ? (
+          <div
+            id="mobile-navigation"
+            className="w-full border-b border-white/5 bg-[#0a0a0f]/95 backdrop-blur-xl md:hidden"
+          >
+            <nav aria-label="Mobile" className="flex flex-col px-6 py-4 text-sm text-gray-300">
+              <a
+                href="#about"
+                className="py-3 transition-colors hover:text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="py-3 transition-colors hover:text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a
+                href="#awards"
+                className="py-3 transition-colors hover:text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Awards
+              </a>
+              <a
+                href="#contact"
+                className="py-3 transition-colors hover:text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+        ) : null}
       </header>
       <main id="main-content">
         <Hero />
