@@ -9,7 +9,7 @@ export const projects = [
     status: { label: 'Completed', color: 'bg-green-500' },
     links: {
       demo: 'https://smtapp.vercel.app/',
-      github: 'https://github.com/navafv/smt_project',
+      github: '',
     },
   },
   {
@@ -22,7 +22,7 @@ export const projects = [
     status: { label: 'Completed', color: 'bg-green-500' },
     links: {
       demo: 'https://noorinstitute.vercel.app/',
-      github: 'https://github.com/navafv/noor-backend',
+      github: '',
     },
   },
   {
