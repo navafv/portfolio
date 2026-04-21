@@ -34,6 +34,9 @@ const Contact = () => {
     
     if (!validate()) {
       setStatus('error');
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
       return;
     }
 
@@ -64,6 +67,9 @@ const Contact = () => {
     } catch (error) {
       console.error("Submission failed:", error);
       setStatus('error');
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
     }
   };
 
