@@ -40,7 +40,7 @@ const Projects = () => {
                   <span className="text-xs font-medium text-gray-300">{project.status.label}</span>
                 </div>
 
-                <div className="relative z-10 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
+                <div className="relative z-10 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300 mt-14 md:mt-0">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     {project.tech.map((t, i) => (
                       <span key={i} className="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-white backdrop-blur-md">
