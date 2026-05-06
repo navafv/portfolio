@@ -1,6 +1,19 @@
 import React from 'react';
 import { MapPin, ArrowRight, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon } from './BrandIcons';
 import { motion } from 'framer-motion';
+
+const SocialIcon = ({ href, icon, label }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
+    className="group w-12 h-12 rounded-full flex items-center justify-center bg-white/5 border border-white/10 text-gray-400 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:text-white hover:bg-purple-500/20 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:-translate-y-1"
+  >
+    {icon}
+  </a>
+);
 
 const Hero = () => {
   const MotionDiv = motion.div;
@@ -130,6 +143,13 @@ const Hero = () => {
             <Mail size={20} className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-300" />
             <span className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-300">Get in Touch</span>
           </a>
+        </MotionDiv>
+
+        <MotionDiv variants={itemVariants} className="flex items-center gap-5 relative z-20 mt-4">
+          <SocialIcon href="https://github.com/navafv" icon={<GithubIcon size={22} />} label="GitHub" />
+          <SocialIcon href="https://linkedin.com/in/navaf-v" icon={<LinkedinIcon size={22} />} label="LinkedIn" />
+          <SocialIcon href="https://x.com/navaf_v" icon={<TwitterIcon size={22} />} label="Twitter" />
+          <SocialIcon href="https://instagram.com/na.vaf" icon={<InstagramIcon size={22} />} label="Instagram" />
         </MotionDiv>
       </MotionDiv>
     </section>
