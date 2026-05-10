@@ -8,6 +8,7 @@ import Awards from './components/Awards';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-[#ededed] font-sans selection:bg-purple-500/30 selection:text-purple-200">
       <Seo />
+      <Analytics />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-black"
