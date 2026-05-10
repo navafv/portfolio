@@ -8,7 +8,7 @@ import Awards from './components/Awards';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
