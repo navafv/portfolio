@@ -76,7 +76,7 @@ const Footer = () => {
             <GithubIcon size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://linkedin.com/in/navaf-v"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
@@ -85,7 +85,7 @@ const Footer = () => {
             <LinkedinIcon size={18} />
           </a>
           <a
-            href="https://twitter.com/your-twitter-username"
+            href="https://twitter.com/navaf_v"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter profile"
@@ -94,7 +94,7 @@ const Footer = () => {
             <TwitterIcon size={18} />
           </a>
           <a
-            href="https://instagram.com/your-instagram-username"
+            href="https://instagram.com/na.vaf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram profile"
@@ -103,7 +103,7 @@ const Footer = () => {
             <InstagramIcon size={18} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:your.navafkcp@gmail.com"
             aria-label="Send email"
             className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:-translate-y-1 transition-all duration-300"
           >
