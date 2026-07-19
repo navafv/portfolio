@@ -103,7 +103,7 @@ const Footer = () => {
             <InstagramIcon size={18} />
           </a>
           <a
-            href="mailto:your.navafkcp@gmail.com"
+            href="mailto:navafkcp@gmail.com"
             aria-label="Send email"
             className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:-translate-y-1 transition-all duration-300"
           >
